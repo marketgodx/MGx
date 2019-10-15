@@ -71,6 +71,11 @@ Example: https://docs.google.com/spreadsheets/d/1CLM_FsqIwiDnndAlmgifuy-y8Z4Hy3G
 # Run the code
 `python tv_monitor.py`
 
+
+# Failed UserAdd
+In the event that the script cannot find the user in the "hinted active list" it will drop it into the file failedtoaddtotradingview.txt
+
+
 ### Notes:  
 A Firefox browser should open up and begin the login process.  It will constantly recheck the google list vs the TradingView list.  You can optionally set this to headless using the `healdess=True` argument as shown below
 
