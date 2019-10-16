@@ -1,5 +1,5 @@
 # MG_User_Management
-Compares the googlesheet source that the onboarding form saves data to with the the TradingView "Manage Access" user list.  If a user is missing it attempts to add that user if a series of checks are passed.
+Compares the googlesheet source that the onboarding form saves data to with the the TradingView "Manage Access" user list.  If a user is missing it attempts to add that user if a series of checks are passed.  It will also after adding users compare the list again and identify who is on the TV list and remove them if they do not exist on the Google Sheet.
 
 There are two processes running.  A primary process that adds usernames to TV and a background process per se' (multiprocessing) that pulls the google information then uses multiprocessing.Queue to pass the list to the primary process.  Every cycle the process uses the newly sent list to check against.
 
@@ -10,6 +10,7 @@ There are two processes running.  A primary process that adds usernames to TV an
 * Google Sheet Permissions (ReadOnly)
 * Google API Pickle File
 * Google API credentials.json file
+* Tradingview tvcreds.json file
 
 
 ## Setup  
